@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="input.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-300 flex justify-center items-center md:max-w-2xl sm:text-center lg:max-w-max">
+    <div class="flex max-w-max flex-col bg-blue-300 p-5 border justify-evenly items-center h-lvh" id="Weather">
+        <h1 class="text-blue-900 font-bold text-2xl underline text-center">Weather Forecast Application</h1>
+        <br/>
+        <div class="flex g-5">
+            <input type="text" class="w-8/12 p-2 border-white mt-2 h-10" id="city" placeholder="Enter city">
+            <button
+                class="bg-blue-700 text-white p-2 border-none cursor-pointer mt-2 w-28 h-10 font-normal hover:bg-blue-600"
+                id="btn1"><i>Search</i></button>
+            <button
+                class="bg-green-700 text-white cursor-pointer mt-2 w-36 h-10 hover:bg-green-600"
+                id="btn2"><i>CurrentLocation</i></button>
+        </div><br />
+        <h2 id="cityName"><strong>City name</strong></h2>
+        <br />
+        <h2 class="font-bold text-blue-900" id="temp">Temperature:</h2>
+        <br />
+        <img src="images/cloudy.png" class="w-28 h-28" id="weaic" alt="Weather Icon">
+        <div class="flex flex-col font-bold mt-12 md:flex-shrink-0">
+            <h2 class="font-thin">
+                <table>
+                    <tr>
+                        <td><i>Date:</i></td>
+                        <td id="date"></td>
+                    </tr>
+                </table>
+            </h2>
+            <h2 class="font-thin">
+                <table>
+                    <tr>
+                        <td><i>Wind:</i></td>
+                        <td id="wind"></td>
+                    </tr>
+                </table>
+            </h2>
+            <h2 class="font-thin">
+                <table>
+                    <tr>
+                        <td><i>Humidity:</i></td>
+                        <td id="humidity"></td>
+                    </tr>
+                </table>
+            </h2>
+        </div>
+        <br/>
+        <h1 class="text-blue-950 font-bold hover:underline"><em>5-Days Forecast</em></h1>
+        <div class="flex flex-row justify-evenly items-center bg-gray-600 mt-4 p-2" id="daysForecast">
+            <section class="flex-col text-white">
+                <h2 class="font-thin">
+                    <table>
+                        <img src="images/cloudy1.png" class="w-14 h-14" id="weaic" alt="Weather Icon">
+                        <tr>
+                            <td>Date:</td>
+                            <td id="date1"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Temperature:</td>
+                            <td id="temp1"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Wind:</td>
+                            <td id="wind1"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Humidity:</td>
+                            <td id="humidity1"></td>
+                        </tr>
+                    </table>
+                </h2>
+            </section>
+            <section class="flex-col text-white">
+                <h2 class="font-thin">
+                    <table>
+                        <img src="images/cloudy2.png" class="w-14 h-14" id="weaic" alt="Weather Icon">
+                        <tr>
+                            <td>Date:</td>
+                            <td id="date2"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Temperature:</td>
+                            <td id="temp2"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Wind:</td>
+                            <td id="wind2"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Humidity:</td>
+                            <td id="humidity2"></td>
+                        </tr>
+                    </table>
+                </h2>
+            </section>
+            <section class="flex-col text-white">
+                <h2 class="font-thin">
+                    <table>
+                        <img src="images/cloudy3.png" class="w-14 h-14" id="weaic" alt="Weather Icon">
+                        <tr>
+                            <td>Date:</td>
+                            <td id="date3"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Temperature:</td>
+                            <td id="temp3"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Wind:</td>
+                            <td id="wind3"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Humidity:</td>
+                            <td id="humidity3"></td>
+                        </tr>
+                    </table>
+                </h2>
+            </section>
+            <section class="flex-col text-white">
+                <h2 class="font-thin">
+                    <table>
+                        <img src="images/cloudy4.png" class="w-14 h-14" id="weaic" alt="Weather Icon">
+                        <tr>
+                            <td>Date:</td>
+                            <td id="date4"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Temperature:</td>
+                            <td id="temp4"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Wind:</td>
+                            <td id="wind4"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Humidity:</td>
+                            <td id="humidity4"></td>
+                        </tr>
+                    </table>
+                </h2>
+            </section>
+            <section class="flex-col text-white">
+                <h2 class="font-thin">
+                    <table>
+                        <img src="images/cloudy5.png" class="w-14 h-14" id="weaic" alt="Weather Icon">
+                        <tr>
+                            <td>Date:</td>
+                            <td id="date5"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Temperature:</td>
+                            <td id="temp5"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Wind:</td>
+                            <td id="wind5"></td>
+                        </tr>
+                    </table>
+                </h2>
+                <h2 class="font-thin">
+                    <table>
+                        <tr>
+                            <td>Humidity:</td>
+                            <td id="humidity5"></td>
+                        </tr>
+                    </table>
+                </h2>
+            </section>
+        </div>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
